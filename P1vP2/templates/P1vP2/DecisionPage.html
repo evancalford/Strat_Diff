@@ -1,0 +1,31 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}Round {{ subsession.round_number }} : {{subsession.title_descr}}{% endblock %}
+
+{% block content %}
+
+
+<p>In this round you are <span class="bold">P{{player.id_in_group}}</span>.</p>
+<br>
+
+<p> <span class="bold"> P1 earnings </span> </p>
+
+<p> {{ subsession.P1_descr }} </p>
+    <br>
+<br>
+<p>     <span class="bold"> P2 earnings </span> </p>
+<p> {{ subsession.P2_descr }} </p>
+    <br>
+<br>
+<br>
+
+{% formfields %}
+<br>
+{% next_button %}
+
+
+{% include Constants.css_styles_template %}
+
+
+{% endblock %}
